@@ -24,7 +24,7 @@ def generate_launch_description():
                 launch_arguments={'world': os.path.join(get_package_share_directory(package_name), 'worlds', 'line_world.world')}.items()
              )
 
-    # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
+    # Run the spawner node from the gazebo_ros package.
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'my_bot'],
