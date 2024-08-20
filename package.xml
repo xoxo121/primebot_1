@@ -3,11 +3,15 @@
 <package format="3">
   <name>primebot_1</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="my_email@email.com">fire_enigma</maintainer>
-  <license>TODO: License declaration</license>
+  <description>PrimeBot Line Follower Robot</description>
+  <maintainer email="fire_enigma@todo.todo">fire_enigma</maintainer>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
