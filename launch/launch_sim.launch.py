@@ -29,9 +29,12 @@ def generate_launch_description():
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'my_bot'],
                         output='screen')
+    
+    move_robot = Node(package='primebot_1', executable='line_follower_node.py', output='screen')
 
     return LaunchDescription([
         rsp,
         gazebo,
         spawn_entity,
+        move_robot
     ])

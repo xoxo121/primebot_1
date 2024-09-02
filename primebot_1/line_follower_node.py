@@ -51,7 +51,7 @@ class LineFollowerNode(Node):
 
         # Compute control commands
         twist_msg = Twist()
-        twist_msg.linear.x = 0.2  # Default move forward speed
+        twist_msg.linear.x = 5 # Default move forward speed
 
         if center_sensor < 0.1:  # If the center sensor detects a line
             twist_msg.angular.z = 0.0  # No turn
@@ -69,6 +69,7 @@ def main(args=None):
     rclpy.init(args=args)
     node = LineFollowerNode()
     rclpy.spin(node)
+    node.control_robot()
     node.destroy_node()
     rclpy.shutdown()
 
